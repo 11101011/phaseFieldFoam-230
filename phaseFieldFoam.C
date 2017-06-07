@@ -46,6 +46,7 @@ Description
 #include "turbulenceModel.H"
 #include "pimpleControl.H"
 #include "fvIOoptionList.H"
+#include "fixedFluxPressureFvPatchScalarField.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
@@ -54,12 +55,13 @@ int main(int argc, char *argv[])
     #include "setRootCase.H"
     #include "createTime.H"
     #include "createDynamicFvMesh.H"
-    #include "initContinuityErrs.H"
-    #include "createFields.H"
-    #include "readTimeControls.H"
 
     pimpleControl pimple(mesh);
 
+    #include "initContinuityErrs.H"
+    #include "createFields.H"
+    #include "readTimeControls.H"
+    #include "createPrghCorrTypes.H"
     #include "correctPhi.H"
     #include "CourantNo.H"
     #include "setInitialDeltaT.H"
@@ -75,6 +77,7 @@ int main(int argc, char *argv[])
     {
         #include "readControls.H"
 
+        
         if (t && (runTime.value()<=runTime.deltaTValue()))
         {
             #include "CourantNo.H"
@@ -164,8 +167,6 @@ int main(int argc, char *argv[])
                 }
             }
         }
-
-        //#include "interfaceFlux.H"
 
         runTime.write();
 

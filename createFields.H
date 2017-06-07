@@ -69,7 +69,6 @@
         fvc::interpolate(U)& mesh.Sf()
     );
 
-
     //-For input, to avoid precalculation, the alpha1 field simply must
     // be = 1 for liquid, and 0 for gas, and vary in between to set the interface
 
@@ -162,7 +161,7 @@
             IOobject::NO_READ,
             IOobject::NO_WRITE
         ),
-      - fvc::div(difFlux) - fvc::div(phi,alpha1)
+      - fvc::div(difFlux) - fvc::div(phi,alpha1,"div(phi,alpha)")
     );
 
     surfaceScalarField glapAlpha1

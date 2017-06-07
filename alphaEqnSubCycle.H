@@ -1,4 +1,4 @@
-
+{
     //-Update the refinement field indicator
     gradAlpha1Field = 
     twoPhaseProperties.capillaryWidth()*mag(fvc::grad(alpha1))/Foam::pow(scalar(2),scalar(0.5))/Foam::pow(twoPhaseProperties.filterAlpha()*(scalar(1)
@@ -49,7 +49,8 @@
 
     twoPhaseProperties.updateContactAngle(alpha1);
 
-    Info<< "Phase-1 volume fraction = " << alpha1.weightedAverage(mesh.Vsc()).value()
+    Info<< "Phase-1 volume fraction = " 
+        << alpha1.weightedAverage(mesh.Vsc()).value()
         << "  Min(alpha1) = " << min(alpha1).value()
         << "  Max(alpha1) = " << max(alpha1).value()
         << endl;
@@ -57,3 +58,4 @@
     rho = twoPhaseProperties.rhoMix(scalar(0.5)*(alpha1.oldTime() + alpha1));
 
     rhoPhi = rhoPhiSum;
+}
