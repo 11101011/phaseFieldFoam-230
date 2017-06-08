@@ -49,7 +49,7 @@
 
     twoPhaseProperties.updateContactAngle(alpha1);
 
-    Info<< "Phase-1 volume fraction = " 
+    Info<< "Phase-1 volume fraction = "
         << alpha1.weightedAverage(mesh.Vsc()).value()
         << "  Min(alpha1) = " << min(alpha1).value()
         << "  Max(alpha1) = " << max(alpha1).value()

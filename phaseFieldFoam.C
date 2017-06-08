@@ -34,7 +34,7 @@ Description
     Written by:
     Donaldson, Adam: Dalhousie University Halifax, Canada
 
-    Ported to OpenFOAM version 2.2.0:
+    Ported to OpenFOAM version 2.3.0:
     Weiss, Sebastian: TU Bergakademie Freiberg, Germany
 
 \*---------------------------------------------------------------------------*/
@@ -77,7 +77,6 @@ int main(int argc, char *argv[])
     {
         #include "readControls.H"
 
-        
         if (t && (runTime.value()<=runTime.deltaTValue()))
         {
             #include "CourantNo.H"

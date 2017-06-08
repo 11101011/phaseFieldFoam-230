@@ -33,7 +33,7 @@
     T_Multiplier = scalar(0);
     K_Multiplier = scalar(0);
 
-    Info<< "Solving for alpha1 w/ Runge-Kutta algorithm: ";
+    Info<< "Solving for alpha1 w/ Runge-Kutta algorithm: "; // Boundary Min: <--- ?
     for (int i=0; i<=3; i++)
     {
         Info << " " << scalar(i);
