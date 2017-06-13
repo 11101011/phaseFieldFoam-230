@@ -33,7 +33,7 @@
     T_Multiplier = scalar(0);
     K_Multiplier = scalar(0);
 
-    Info<< "Solving for alpha1 w/ Runge-Kutta algorithm: "; // Boundary Min: <--- ?
+    Info<< "Solving for alpha1 w/ Runge-Kutta algorithm: ";
     for (int i=0; i<=3; i++)
     {
         Info << " " << scalar(i);
@@ -49,7 +49,7 @@
 
     alpha1 = alpha1.oldTime() + runTime.deltaT()*K_alpha1;
 
-    twoPhaseProperties.updateContactAngle(alpha1);
+    twoPhaseProperties.updateContactAngle(alpha1,boundaryMin,boundaryMin_t);
 
     rho = twoPhaseProperties.rhoMix(scalar(0.5)*(alpha1.oldTime() + alpha1));
 
