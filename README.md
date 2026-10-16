@@ -24,7 +24,7 @@ Ported to OpenFOAM version 2.3.0 and further developed:
 Changes and fixes (2015-2018)
 -----------------------------
 
-Besides the port to OpenFOAM 2.2.0, the solver was corrected and extended
+Besides the port to OpenFOAM 2.3.0, the solver was corrected and extended
 in several places. See the commit history for details.
 
 **Physical corrections**
