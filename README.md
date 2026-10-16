@@ -16,7 +16,7 @@ Original code by:
 
    Donaldson, Adam: Dalhousie University Halifax, Canada
 
-Ported to OpenFOAM version 2.2.0 and further developed:
+Ported to OpenFOAM version 2.3.0 and further developed:
 -------------------------------------------------------
 
    Weiss, Sebastian: TU Bergakademie Freiberg, Germany
